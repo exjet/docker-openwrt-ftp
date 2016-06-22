@@ -28,7 +28,7 @@ else
     useradd -d /data/$FTP_USER -s /bin/false -g ftp -p $(openssl passwd $FTP_PASS) $FTP_USER
 fi
 
-mkdir -p /data/$FTP_USER/incoming
+mkdir -p /data/$FTP_USER
 chown -R $FTP_USER:ftp /data/$FTP_USER
 
 cat <<EOF> /etc/vsftpd.conf
